@@ -74,8 +74,8 @@ def accdetails(left_frame,usname,accno,pin):
             data = cursor.fetchall()
             details_exract(left_frame,data,usname)
                    
-        except sqlite3.Error as error:
-            print(error)
+        except:
+            tkinter.messagebox.showinfo("NOT FOUND","ACCOUNT NOT FOUND!")
 def accdetails_page(left_frame,usname):
     for widgets in left_frame.winfo_children():   #to delete old widgets
         widgets.destroy()
